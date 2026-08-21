@@ -12,7 +12,7 @@ tj:
     enable: true
     enableResponseWrap: true
     package-path: com.tianji.data.controller
-    title: 天机学堂 - 数据中心接口文档
+    title: 智能在线教育系统 - 数据中心接口文档
     description: 该服务包含数据看板统计的功能
     contact-name: lfeternity
     contact-url: https://github.com/lfeternity/tjxtai

@@ -12,7 +12,7 @@ tj:
     enable: true
     enableResponseWrap: true
     package-path: com.tianji.message.controller
-    title: 天机学堂 - 消息中心接口文档
+    title: 智能在线教育系统 - 消息中心接口文档
     description: 该服务用于站内信、通知管理、短信发送等功能
     contact-name: lfeternity
     contact-url: https://github.com/lfeternity/tjxtai

@@ -27,6 +27,8 @@
         <module>tj-aigc</module>
     </modules>
     <packaging>pom</packaging>
+    <name>智能在线教育系统</name>
+    <description>基于 Spring Boot 3 和 Spring Cloud 的在线教育微服务系统</description>
 
     <!-- 继承 Spring Boot 父工程 -->
     <parent>

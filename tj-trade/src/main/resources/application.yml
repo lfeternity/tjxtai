@@ -12,7 +12,7 @@ tj:
     enable: true
     enableResponseWrap: true
     package-path: com.tianji.trade.controller
-    title: 天机学堂 - 交易中心接口文档
+    title: 智能在线教育系统 - 交易中心接口文档
     description: 该服务提供购物车、订单管理等功能
     contact-name: lfeternity
     contact-url: https://github.com/lfeternity/tjxtai

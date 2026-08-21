@@ -1,6 +1,6 @@
-# tjxtai
+# 智能在线教育系统
 
-`tjxtai` 是一个面向在线教育场景的 Java 微服务后端。项目以 Spring Boot 3、Spring Cloud、Spring Cloud Alibaba 为基础，覆盖用户、权限、课程、交易、支付、学习、考试、营销、媒资、消息、搜索、数据统计与 AIGC 等业务域。
+智能在线教育系统是一个面向在线教育场景的 Java 微服务后端。项目以 Spring Boot 3、Spring Cloud、Spring Cloud Alibaba 为基础，覆盖用户、权限、课程、交易、支付、学习、考试、营销、媒资、消息、搜索、数据统计与 AIGC 等业务域。
 
 > 当前仓库仅包含后端源码。完整运行还依赖 Nacos 配置、数据库结构及若干中间件；这些基础设施数据没有全部随源码提供，请先阅读“运行前准备”。
 
