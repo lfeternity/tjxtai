@@ -21,7 +21,7 @@ tj:
     title: 智能在线教育系统 - 权限微服务接口文档
     description: 该服务用于管理权限相关信息
     contact-name: lfeternity
-    contact-url: https://github.com/lfeternity/tjxtai
+    contact-url: https://github.com/lfeternity/Smart-Online-Education
     version: v1.0
   auth:
     resource:

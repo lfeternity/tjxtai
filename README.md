@@ -227,7 +227,7 @@ mvn test
 
 ## 维护
 
-仓库：<https://github.com/lfeternity/tjxtai>
+仓库：<https://github.com/lfeternity/Smart-Online-Education>
 
 维护者：[@lfeternity](https://github.com/lfeternity)
 

@@ -1,6 +1,6 @@
 FROM eclipse-temurin:17-jre
 LABEL org.opencontainers.image.authors="lfeternity"
-LABEL org.opencontainers.image.source="https://github.com/lfeternity/tjxtai"
+LABEL org.opencontainers.image.source="https://github.com/lfeternity/Smart-Online-Education"
 ENV JAVA_OPTS=""
 # 设定时区
 ENV TZ=Asia/Shanghai

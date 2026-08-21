@@ -15,7 +15,7 @@ tj:
     title: 智能在线教育系统 - 学习中心接口文档
     description: 该服务包含用户学习的各种辅助功能
     contact-name: lfeternity
-    contact-url: https://github.com/lfeternity/tjxtai
+    contact-url: https://github.com/lfeternity/Smart-Online-Education
     version: v1.0
   jdbc:
     database: tj_learning

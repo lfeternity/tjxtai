@@ -14,7 +14,7 @@ tj:
     title: 智能在线教育系统 - 媒资中心接口文档
     description: 该服务包含图片管理、媒资管理等
     contact-name: lfeternity
-    contact-url: https://github.com/lfeternity/tjxtai
+    contact-url: https://github.com/lfeternity/Smart-Online-Education
     version: v1.0
     enableResponseWrap: true
   auth:
