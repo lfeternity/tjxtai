@@ -230,3 +230,7 @@ mvn test
 仓库：<https://github.com/lfeternity/tjxtai>
 
 维护者：[@lfeternity](https://github.com/lfeternity)
+
+## 许可证
+
+本项目采用 [MIT License](LICENSE) 开源许可证。
