@@ -22,6 +22,7 @@ public class MybatisConfig {
      */
     // @Bean
     // @ConditionalOnMissingBean
+    @Deprecated
     public BaseMetaObjectHandler baseMetaObjectHandler() {
         return new BaseMetaObjectHandler();
     }

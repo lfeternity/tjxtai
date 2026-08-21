@@ -1,6 +1,5 @@
 package com.tianji.pay.controller;
 
-import com.tianji.common.utils.StringUtils;
 import com.tianji.pay.sdk.constants.PayConstants;
 import com.tianji.pay.service.INotifyService;
 import com.wechat.pay.contrib.apache.httpclient.notification.NotificationRequest;
@@ -34,7 +33,7 @@ public class NotifyController {
         // 1.处理请求参数为一个Map
         Map<String, String[]> parameterMap = httpRequest.getParameterMap();
         Map<String, String> request = parameterMap.entrySet().stream().collect(
-                Collectors.toMap(Map.Entry::getKey, e -> StringUtils.join(",", e.getValue())));
+                Collectors.toMap(Map.Entry::getKey, e -> String.join(",", e.getValue())));
         // 2.处理通知
         notifyService.handleAliPayNotify(request);
         return ResponseEntity.ok("success");

@@ -42,5 +42,6 @@ public class ReplyDTO {
     private Long targetUserId;
 
     @Schema(description = "标记是否是学生提交的回答，默认true")
+    @Builder.Default
     private Boolean isStudent = true;
 }
