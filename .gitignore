@@ -1,0 +1,37 @@
+# IDE and editor files
+.idea/
+.vscode/
+*.iml
+.classpath
+.project
+.settings/
+
+# Maven and Java build output
+**/target/
+out/
+gen/
+*.class
+*.log
+logs/
+job/
+
+# Local runtime files
+tmp/
+*.pid
+*.hprof
+hs_err_pid*
+
+# Secrets and local overrides
+.env
+.env.*
+!.env.example
+*.jks
+*.keystore
+*.p12
+*.pfx
+*.pem
+*.key
+
+# Operating-system metadata
+.DS_Store
+Thumbs.db

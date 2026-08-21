@@ -1,0 +1,33 @@
+server:
+  port: 8081  #端口
+  tomcat:
+    uri-encoding: UTF-8   #服务编码
+spring:
+  profiles:
+    active: "${SPRING_PROFILES_ACTIVE:local}"
+  application:
+    name: auth-service
+encrypt:
+  key-store:
+    alias: "${TJ_AUTH_KEY_ALIAS:tjxt}"  #别名
+    location: "${TJ_AUTH_KEYSTORE:classpath:tjxt.jks}"  #KeyStore 证书库名称
+    password: "${TJ_AUTH_KEYSTORE_PASSWORD}"  #证书库密码
+    secret: "${TJ_AUTH_KEY_PASSWORD}"  #秘钥
+tj:
+  swagger:
+    enable: true
+    enableResponseWrap: true
+    package-path: com.tianji.auth.controller
+    title: 天机学堂 - 权限微服务接口文档
+    description: 该服务用于管理权限相关信息
+    contact-name: lfeternity
+    contact-url: https://github.com/lfeternity/tjxtai
+    version: v1.0
+  auth:
+    resource:
+      enable: true
+      includeLoginPaths:
+        - /menus/me
+        - /accounts/logout
+  jdbc:
+    database: tj_auth

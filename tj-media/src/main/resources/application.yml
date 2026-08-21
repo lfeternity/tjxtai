@@ -1,0 +1,53 @@
+server:
+  port: 8084  #端口
+  tomcat:
+    uri-encoding: UTF-8   #服务编码
+spring:
+  profiles:
+    active: "${SPRING_PROFILES_ACTIVE:local}"
+  application:
+    name: media-service
+tj:
+  swagger:
+    enable: true
+    package-path: com.tianji.media.controller
+    title: 天机学堂 - 媒资中心接口文档
+    description: 该服务包含图片管理、媒资管理等
+    contact-name: lfeternity
+    contact-url: https://github.com/lfeternity/tjxtai
+    version: v1.0
+    enableResponseWrap: true
+  auth:
+    resource:
+      enable: true
+      excludeLoginPaths:
+        - /medias/signature/play
+  jdbc:
+    database: tj_media
+  platform:
+    file: TENCENT
+#    file: ALI
+    media: TENCENT
+  ali:
+    accessId: "${ALIYUN_OSS_ACCESS_KEY_ID:}"
+    accessKey: "${ALIYUN_OSS_ACCESS_KEY_SECRET:}"
+    oss:
+      endpoint: "${ALIYUN_OSS_ENDPOINT:oss-cn-shanghai.aliyuncs.com}"
+      bucket: "${ALIYUN_OSS_BUCKET:}"
+  tencent:
+    appId: "${TENCENT_CLOUD_APP_ID:0}"
+    secretId: "${TENCENT_CLOUD_SECRET_ID:}"
+    secretKey: "${TENCENT_CLOUD_SECRET_KEY:}"
+    vod:
+      enable: true
+      vodValidSeconds: 7776000
+      region: "ap-shanghai"
+      procedure: "wisehub-base"
+      urlKey: "${TENCENT_VOD_URL_KEY:}"
+      pfcg: "${TENCENT_VOD_PROCEDURE:basicDrmPreset}"
+    cos:
+      enable: true
+      region: "ap-nanjing"
+      bucket: "${TENCENT_COS_BUCKET:}"
+      multipartUploadThreshold: 5242880 # 5mb，触发分片上传的阈值
+      minimumUploadPartSize: 1048576 # 1mb，分片的最小大小

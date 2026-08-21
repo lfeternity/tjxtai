@@ -1,0 +1,26 @@
+server:
+  port: 8086  #端口
+  tomcat:
+    uri-encoding: UTF-8   #服务编码
+spring:
+  profiles:
+    active: "${SPRING_PROFILES_ACTIVE:local}"
+  application:
+    name: course-service
+  main:
+    allow-circular-references: true
+tj:
+  swagger:
+    enable: true
+    package-path: com.tianji.course.controller
+    title: 天机学堂 - 课程系统接口文档
+    description: 该服务包含课程管理相关功能
+    contact-name: lfeternity
+    contact-url: https://github.com/lfeternity/tjxtai
+    version: v1.0
+    enableResponseWrap: true
+  auth:
+    resource:
+      enable: false
+  jdbc:
+    database: tj_course

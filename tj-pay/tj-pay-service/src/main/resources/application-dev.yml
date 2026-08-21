@@ -1,0 +1,22 @@
+spring:
+  cloud:
+    nacos:
+      server-addr: "${NACOS_SERVER_ADDR:127.0.0.1:8848}" # Nacos 注册中心
+      username: "${NACOS_USERNAME:nacos}"
+      password: "${NACOS_PASSWORD:nacos}"
+      discovery:
+        namespace: "${NACOS_NAMESPACE:}"
+        group: "${NACOS_GROUP:DEFAULT_GROUP}"
+  config:
+    import:
+      - nacos:${spring.application.name}.yaml # 导入本服务的配置
+      - nacos:shared-spring.yaml # 共享spring配置
+      - nacos:shared-redis.yaml # 共享redis配置
+      - nacos:shared-mybatis.yaml # 共享mybatis配置
+      - nacos:shared-logs.yaml # 共享日志配置
+      - nacos:shared-feign.yaml # 共享feign配置
+      - nacos:shared-mq.yaml # 共享mq配置
+      - nacos:shared-xxljob.yaml # 共享mq配置
+logging:
+  level:
+    com.tianji: debug

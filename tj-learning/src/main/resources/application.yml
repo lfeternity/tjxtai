@@ -1,0 +1,26 @@
+server:
+  port: 8090  #端口
+  tomcat:
+    uri-encoding: UTF-8   #服务编码
+spring:
+  profiles:
+    active: "${SPRING_PROFILES_ACTIVE:local}"
+  application:
+    name: learning-service
+tj:
+  swagger:
+    enable: true
+    enableResponseWrap: true
+    package-path: com.tianji.learning.controller
+    title: 天机学堂 - 学习中心接口文档
+    description: 该服务包含用户学习的各种辅助功能
+    contact-name: lfeternity
+    contact-url: https://github.com/lfeternity/tjxtai
+    version: v1.0
+  jdbc:
+    database: tj_learning
+  auth:
+    resource:
+      enable: false
+  ai:
+    user-id: 9999

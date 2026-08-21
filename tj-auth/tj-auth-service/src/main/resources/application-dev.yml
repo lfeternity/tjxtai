@@ -1,0 +1,18 @@
+spring:
+  cloud:
+    nacos:
+      server-addr: "${NACOS_SERVER_ADDR:127.0.0.1:8848}" # Nacos 注册中心
+      username: "${NACOS_USERNAME:nacos}"
+      password: "${NACOS_PASSWORD:nacos}"
+      discovery:
+        namespace: "${NACOS_NAMESPACE:}"
+        group: "${NACOS_GROUP:DEFAULT_GROUP}"
+  config:
+    import:
+      - nacos:shared-spring.yaml
+      - nacos:shared-redis.yaml
+      - nacos:shared-mybatis.yaml
+      - nacos:shared-logs.yaml
+logging:
+  level:
+    com.tianji: debug

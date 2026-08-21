@@ -1,0 +1,52 @@
+server:
+  port: 8094  #端口
+  tomcat:
+    uri-encoding: UTF-8   #服务编码
+spring:
+  profiles:
+    active: "${SPRING_PROFILES_ACTIVE:local}"
+  application:
+    name: aigc-service
+  main:
+    allow-circular-references: true # 允许循环引用
+tj:
+  swagger:
+    enable: true
+    package-path: com.tianji.aigc.controller
+    title: 天机学堂 - AIGC接口文档
+    description: 该服务包含AI相关功能
+    contact-name: lfeternity
+    contact-url: https://github.com/lfeternity/tjxtai
+    version: v1.0
+    enableResponseWrap: true
+  auth:
+    resource:
+      enable: true
+  jdbc:
+    database: tj_aigc #指定使用的数据库名
+  ai:
+    prompt:
+      system:
+        chat:
+          data-id: system-chat-message.txt
+          group: DEFAULT_GROUP
+          timeout-ms: 20000
+        route-agent:
+          data-id: route-agent-system-message.txt
+        recommend-agent:
+          data-id: recommend-agent-system-message.txt
+        buy-agent:
+          data-id: buy-agent-system-message.txt
+        text:
+          data-id: text-system-chat-message.txt
+    memory:
+      max: 100
+      type: Redis #对话记忆存储方式，Redis / MYSQL / MongoDB
+    chat-type: ENHANCE # ROUTE / ENHANCE / APP
+    audio-type: DASHSCOPE # OPENAI / DASHSCOPE
+  ali:
+    oss:
+      endpoint: "${ALIYUN_OSS_ENDPOINT:oss-cn-shanghai.aliyuncs.com}"
+      access-id: "${ALIYUN_OSS_ACCESS_KEY_ID:}"
+      access-key: "${ALIYUN_OSS_ACCESS_KEY_SECRET:}"
+      bucket: "${ALIYUN_OSS_BUCKET:}"

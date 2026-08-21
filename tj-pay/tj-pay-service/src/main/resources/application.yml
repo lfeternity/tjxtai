@@ -1,0 +1,35 @@
+server:
+  port: 8087  #端口
+  tomcat:
+    uri-encoding: UTF-8   #服务编码
+  error:
+    include-message: always #返回的响应体带上message
+spring:
+  profiles:
+    active: "${SPRING_PROFILES_ACTIVE:local}"
+  application:
+    name: pay-service
+tj:
+  swagger:
+    enable: true
+    enableResponseWrap: true
+    package-path: com.tianji.pay.controller
+    title: 天机学堂 - 支付中心接口文档
+    description: 该服务提供微信、支付宝等各种平台的支付、退款等功能
+    contact-name: lfeternity
+    contact-url: https://github.com/lfeternity/tjxtai
+    version: v1.0
+  jdbc:
+    database: tj_pay
+  pay:
+    notifyHost: "${PAY_NOTIFY_HOST:}"
+    ali:
+      appId: "${ALIPAY_APP_ID:}"
+      merchantPrivateKey: "${ALIPAY_MERCHANT_PRIVATE_KEY:}"
+      publicKey: "${ALIPAY_PUBLIC_KEY:}"
+    wx:
+      appId: "${WECHAT_PAY_APP_ID:}"
+      mchId: "${WECHAT_PAY_MCH_ID:}"
+      mchSerialNo: "${WECHAT_PAY_MCH_SERIAL_NO:}"
+      privateKey: "${WECHAT_PAY_PRIVATE_KEY:}"
+      apiV3Key: "${WECHAT_PAY_API_V3_KEY:}"

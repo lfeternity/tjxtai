@@ -1,0 +1,8 @@
+docker run -d \
+--name mongodb \
+-p 27017:27017 \
+--restart=always \
+-v mongodb:/data/db \
+-e MONGO_INITDB_ROOT_USERNAME=tianji \
+-e MONGO_INITDB_ROOT_PASSWORD=123321 \
+mongo:4.4
